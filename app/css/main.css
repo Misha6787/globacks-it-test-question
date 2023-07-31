@@ -1,0 +1,171 @@
+@import "root.css";
+@import "reset.css";
+@import "fonts.css";
+
+body {
+    font-family: 'Proxima Nova Regular', sans-serif;
+    background: #FFFFFF;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 64px auto;
+}
+
+.search-form {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 18px;
+    border: 1px solid #D4DEFE;
+    border-radius: 24px;
+    padding: 12px 24px;
+}
+
+.search-btn {
+    position: absolute;
+    background-image: url("../assets/icons/search.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    right: 24px;
+    transition: 0.2s ease;
+}
+
+.search-btn:hover {
+    transform: scale(1.1);
+}
+
+.search-btn {}
+
+.card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.card-item {
+    box-shadow: 0 0 20px 0 #0000001A;
+    height: 314px;
+    padding: 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.card-item:hover {
+    box-shadow: 0 0 20px 0 #00000030;
+}
+
+.card-title {
+    color: var(--color-names);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.card-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.card-phone:before,
+.card-mail:before {
+    content: '';
+    display: block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+}
+
+.card-phone:before {
+    background-image: url("../assets/icons/phone.svg");
+}
+.card-mail:before {
+    background-image: url("../assets/icons/mail.svg");
+}
+
+/* modal-info */
+
+.modal-info {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #BCC3D080;
+}
+
+.modal-active {
+    display: block;
+}
+
+.modal-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 126px auto;
+    background: #FFFFFF;
+    width: 500px;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px 0 #0000001A;
+    overflow: auto;
+}
+
+.modal-title {
+    color: var(--color-names);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.modal-list {
+    display: grid;
+    margin-bottom: 40px;
+    grid-template-columns: auto 1fr;
+    column-gap: 40px;
+    row-gap: 14px;
+}
+
+.modal-name {
+    color: var(--color-names);
+    font-size: 18px;
+}
+
+.modal-value {
+    color: var(--color-text);
+}
+
+.modal-additional-information-title {
+    color: var(--color-names);
+    margin-bottom: 12px;
+}
+
+.modal-additional-information-text {
+    color: var(--color-text);
+}
+
+.modal-close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/icons/close.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
